@@ -10353,20 +10353,20 @@ end
 Redis:del(TheReveR.."ReveR:Name:Bot") 
 return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙تم حذف اسم البوت ","md",true)   
 end
-if text == (Redis:get(TheReveR.."ReveR:Name:Bot") or "سبارك") then
-local NamesBot = (Redis:get(TheReveR.."ReveR:Name:Bot") or "سبارك")
+if text == (Redis:get(TheReveR.."ReveR:Name:Bot") or "ريفر") then
+local NamesBot = (Redis:get(TheReveR.."ReveR:Name:Bot") or "ريفر")
 local NameBots = {
 "ها "..NamesBot.. " شتريد؟",
 "أჂ̤ أჂ̤ هياتني اني",
 "موجود بس لتصيح",
-"لتــلح دا احجي ويه بنات سبارك بعدين اجاوبك",
+"لتــلح دا احجي ويه بنات ريفر بعدين اجاوبك",
 "راح نموت بكورونا ونته بعدك تصيح "..NamesBot,
 'يمعود والله نعسان'
 }
 return LuaTele.sendText(msg_chat_id,msg_id, NameBots[math.random(#NameBots)],"md",true)  
 end
 if text == "بوت" then
-local NamesBot = (Redis:get(TheReveR.."ReveR:Name:Bot") or "سبارك")
+local NamesBot = (Redis:get(TheReveR.."ReveR:Name:Bot") or "ريفر")
 local BotName = {
 "باوع لك خليني احبك وصيحلي باسمي "..NamesBot,
 "لتخليني ارجع لحركاتي لقديمه وردا ترا اسمي "..NamesBot.. "",
@@ -11308,7 +11308,7 @@ if text == '/start' then
 Redis:sadd(TheReveR..'ReveR:Num:User:Pv',msg.sender.user_id)  
 if not msg.ControllerBot then
 if not Redis:get(TheReveR.."ReveR:Start:Bot") then
-local CmdStart = '*\n᥀︙أهلآ بك في بوت '..(Redis:get(TheReveR.."ReveR:Name:Bot") or "سبارك")..
+local CmdStart = '*\n᥀︙أهلآ بك في بوت '..(Redis:get(TheReveR.."ReveR:Name:Bot") or "ريفر")..
 '\n᥀︙اختصاص البوت حماية المجموعات'..
 '\n᥀︙لتفعيل البوت عليك اتباع مايلي ...'..
 '\n᥀︙اضف البوت الى مجموعتك'..
