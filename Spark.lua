@@ -11319,7 +11319,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥀ السورس .', url = 't.me/REVERTEAM'},{text = '᥀ لتنصيب بوت .', url = 't.me/REVERTEAM'}, 
+{text = '᥀ السورس .', url = 't.me/REVERTEAM'},{text = '᥀ لتنصيب بوت .', url = 't.me/R_REVER'}, 
 },
 {
 {text = '᥀ اضفني في مجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
@@ -11332,7 +11332,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥀ السورس .', url = 't.me/REVERTEAM'},{text = '᥀ لتنصيب بوت .', url = 't.me/REVERTEAM'}, 
+{text = '᥀ السورس .', url = 't.me/REVERTEAM'},{text = '᥀ لتنصيب بوت .', url = 't.me/R_REVER'}, 
 },
 {
 {text = '᥀ اضفني في مجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
