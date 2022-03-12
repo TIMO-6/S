@@ -117,7 +117,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,1931989685}  
+local ListSudos ={Sudo_Id,5274240662}  
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -128,9 +128,9 @@ end
 function Controllerbanall(ChatId,UserId)
 Status = 0
 DevelopersQ = Redis:sismember(TheReveR.."ReveR:DevelopersQ:Groups",UserId) 
-if UserId == 1931989685 then
+if UserId == 5274240662 then
 Status = true
-elseif UserId == 1931989685 then
+elseif UserId == 5274240662 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -154,9 +154,9 @@ Managers = Redis:sismember(TheReveR.."ReveR:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(TheReveR.."ReveR:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheReveR.."ReveR:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1931989685 then
+if UserId == 5274240662 then
 Status = 'مبرمج السورس'
-elseif UserId == 1931989685 then
+elseif UserId == 5274240662 then
 Status = 'مطور السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
@@ -734,9 +734,9 @@ Managers = Redis:sismember(TheReveR.."ReveR:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(TheReveR.."ReveR:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheReveR.."ReveR:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1931989685 then
+if UserId == 5274240662 then
 Status = true
-elseif UserId == 1931989685 then
+elseif UserId == 5274240662 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -773,9 +773,9 @@ Managers = Redis:sismember(TheReveR.."ReveR:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(TheReveR.."ReveR:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheReveR.."ReveR:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1931989685 then
+if UserId == 5274240662 then
 Status = true
-elseif UserId == 1931989685 then
+elseif UserId == 5274240662 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -901,10 +901,10 @@ return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberSt
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
-if tonumber(msg.sender.user_id) == 1931989685 then
+if tonumber(msg.sender.user_id) == 5274240662 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 1931989685 then
+elseif tonumber(msg.sender.user_id) == 5274240662 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
@@ -9916,9 +9916,6 @@ type = 'inline',
 data = {
 {
 {text = 'Channel Source ،', url = 't.me/REVERTEAM'}, 
-},
-{
-{text = 'Communication Source', url = 't.me/hhfhqbot'}, 
 },
 {
 {text = 'Developer Source !', url = 't.me/R_REVER'}, 
