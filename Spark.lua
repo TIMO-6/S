@@ -37,7 +37,7 @@ end
 else
 print('\27[1;34mلم يتم حفظ التوكن جرب مره اخره \nToken not saved, try again')
 end 
-os.execute('lua ReveR.lua')
+os.execute('lua Spark')
 end
 if not Redis:get(SshId.."Info:Redis:User") then
 io.write('\27[1;31mارسل معرف المطور الاساسي الان \nDeveloper UserName saved ↡\n\27[0;39;49m')
@@ -48,7 +48,7 @@ Redis:set(SshId.."Info:Redis:User",UserSudo)
 else
 print('\n\27[1;34mلم يتم حفظ معرف المطور الاساسي \nDeveloper UserName not saved\n')
 end 
-os.execute('lua ReveR.lua')
+os.execute('lua Spark')
 end
 if not Redis:get(SshId.."Info:Redis:User:ID") then
 io.write('\27[1;31mارسل ايدي المطور الاساسي الان \nDeveloper ID saved ↡\n\27[0;39;49m')
@@ -59,7 +59,7 @@ Redis:set(SshId.."Info:Redis:User:ID",UserId)
 else
 print('\n\27[1;34mلم يتم حفظ ايدي المطور الاساسي \nDeveloper ID not saved\n')
 end 
-os.execute('lua ReveR.lua')
+os.execute('lua Spark')
 end
 local Informationlua = io.open("Information.lua", 'w')
 Informationlua:write([[
@@ -75,7 +75,7 @@ local TheReveR = io.open("TheReveR", 'w')
 TheReveR:write([[
 cd $(cd $(dirname $0); pwd)
 while(true) do
-sudo lua5.3 ReveR.lua
+sudo lua5.3 Spark
 done
 ]])
 TheReveR:close()
@@ -2322,8 +2322,8 @@ if text == 'تحديث السورس' or text == 'تحديث السورس ⌔' th
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
-os.execute('rm -rf ReveR.lua')
-download('https://raw.githubusercontent.com/TIMO-6/S/main/ReveR.lua','ReveR.lua')
+os.execute('rm -rf Spark')
+download('https://raw.githubusercontent.com/TIMO-6/S/main/Spark','Spark')
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙تم تحديث السورس * ',"md",true)  
 end
 if text == '『 تعطيل الاذاعه 』' or text == 'تعطيل الاذاعه' then
@@ -4479,9 +4479,9 @@ if TextMsg == 'صورتي' then
 Redis:set(TheReveR.."ReveR:Status:photo"..msg_chat_id,true) 
 return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙ تم تفعيل صورتي ","md",true)
 end
-if TextMsg == 'قول' then
+if TextMsg == 'كول' then
 Redis:set(TheReveR.."ReveR:Status:kool"..msg_chat_id,true) 
-return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙ تم تفعيل امر قول ","md",true)
+return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙ تم تفعيل امر كول ","md",true)
 end
 if TextMsg == 'جمالي' then
 Redis:set(TheReveR.."ReveR:Status:gamle"..msg_chat_id,true) 
@@ -4954,9 +4954,9 @@ if TextMsg == 'صورتي' then
 Redis:del(TheReveR.."ReveR:Status:photo"..msg_chat_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙ تم تعطيل صورتي ","md",true)
 end
-if TextMsg == 'قول' then
+if TextMsg == 'كول' then
 Redis:del(TheReveR.."ReveR:Status:kool"..msg_chat_id) 
-return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙ تم تعطيل امر قول ","md",true)
+return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙ تم تعطيل امر كول ","md",true)
 end
 if TextMsg == 'جمالي' then
 Redis:del(TheReveR.."ReveR:Status:gamle"..msg_chat_id) 
@@ -9857,6 +9857,7 @@ end
 end
 if text and text:match("^كول (.*)$")then
 local m = text:match("^كول (.*)$")
+LuaTele.deleteMessages(msg_chat_id,{[1]= msg_id})
 if Redis:get(TheReveR.."ReveR:Status:kool"..msg.chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,m,"md",true) 
 end
@@ -10329,7 +10330,7 @@ end
 print('Chat Id : '..msg_chat_id)
 print('User Id : '..msg_user_send_id)
 LuaTele.sendText(msg_chat_id,msg_id, "᥀︙ تم تحديث الملفات ♻","md",true)
-dofile('ReveR.lua')  
+dofile('Spark')  
 end
 if text == "تغير اسم البوت" then 
 if not msg.ControllerBot then 
@@ -11302,7 +11303,7 @@ end
 print('Chat Id : '..msg_chat_id)
 print('User Id : '..msg_user_send_id)
 LuaTele.sendText(msg_chat_id,msg_id, "᥀︙ تم تحديث الملفات ♻","md",true)
-dofile('ReveR.lua')  
+dofile('Spark')  
 end
 if text == '/start' then
 Redis:sadd(TheReveR..'ReveR:Num:User:Pv',msg.sender.user_id)  
